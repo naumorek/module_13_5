@@ -114,6 +114,7 @@ async def send_calories(message, state):
         await message.answer('неверный формат веса')
         await message.answer('Введите свой вес еще раз:')
         await UserState.weight.set()
+        await call.answer()
 
 
 @dp.callback_query_handler(text= 'formulas')
